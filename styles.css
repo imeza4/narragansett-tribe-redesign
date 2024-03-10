@@ -36,13 +36,23 @@ h3{
     position: absolute;
     top: 100%; 
     left: 0;
-    padding: 3cqw;
+    padding: 3vh;
+    padding-right: 6vh;
     background-color: #EFEFF0; /* Background color of the dropdown */
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.1);
-} 
+    z-index: 9999;
+  } 
+
+#dropdown-resources h2 {
+  margin-bottom: 3%;
+}
 
 #resources-list:hover #dropdown-resources {
     display: block;
+}
+
+a{
+  text-decoration: none;
 }
 
 .navSection {
@@ -51,8 +61,8 @@ h3{
     margin: 0% 0% 3% 0% ;
     display: flex;
     flex-direction: row;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
   }
 
   .navLinkSide {
@@ -150,47 +160,86 @@ h3{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    .subcard{
-        margin: 8vh 8vh 8vh 8vh;
-        background-color: #E6EBE6;
-        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
-        padding: 3vh 2.7vh 3vh 2.7vh;
-        justify-content: center;
-        width: 24rem;
-        height: 16rem;
-        text-align: center;
-    }
   }
 
   .subcard{
     margin: 8vh 8vh 8vh 8vh;
     background-color: #E6EBE6;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
-    padding: 3vh 2.7vh 3vh 2.7vh;
+    padding: 3vh 16vh 3vh 16vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    text-align: center;
     width: 14rem;
     height: 16rem;
-    text-align: center;
-
   }
 
   .infoCard{
     width: 20rem;
     height: 16rem;
+    padding: 3vh 3vh 3vh 3vh;
   }
 
   .card-container{
     display:flex;
     flex-flow: row wrap;
-    align-content: space-around;
-    text-align: center;
-    vertical-align: middle;
+    justify-content: space-around;
   }
 
   .helpImage{
     width: 9rem;
     height: 9rem;
+  }
+
+  /* bottom area */
+  .end-section{
+    background-color: #EFEFF0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3vh 0vh 3vh 0vh;
+  }
+
+  .arrow{
+    width: 5%;
+    height: 3%;
+  }
+
+  .arrow img{
+    width: 100%;
+    height: auto;
+  }
+
+  .bottom-link-container{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .bottom-link-container p{
+    font-size: 2vw;
+    padding: 2vh 1vh 2vh 1vh;
+
+  }
+
+  /* links */
+  .nav-link{
+    color: #2C6D76;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover{
+    color: #933414;
+  }
+
+  .regular-link{
+    color: #933414;
+    transition: color 0.3s ease;
+  }
+
+  .regular-link:hover{
+    color: #2C6D76;
   }
 
   /* smaller screen */
@@ -220,7 +269,6 @@ h3{
       display:none;
     }
     .icon {
-      /* visibility: visible; */
       display:flex;
 
     }
@@ -228,11 +276,8 @@ h3{
         width: 34px;
         height: 22px;
     }
-
     .contianer img{
         width: 100%;
         height: auto;
     }
-
-
   }
