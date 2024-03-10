@@ -1,43 +1,120 @@
-  <!-- TO RUN IN BROWSER:
-    1. Install vscode extension Name: open in `browser open-in-browser` by TechER
-    2. Right click html file and either run in default browser or another browser
-  -->
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
   <html lang="en">
     <head>
+      <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>HTML/CSS Studio</title>
-      <!-- import CSS styles -->
+      <title>Narragansett Indian Nation</title>
+
+      <!-- Preloading images -->
+      <link rel="preload" href="./photos/duo.png" as="image">
+      <link rel="preload" href="./photos/jingle.png" as="image">
+
       <link rel="stylesheet" href="styles.css" /> 
     </head>
-  
-    <!-- page content goes into <body> -->
+    
+  <!-- body -->
     <body>
-      <div id="logoBar">
-        <h1>Welcome to 100 Acre Wood!</h1>
-        <img id="siteLogo" alt="Pooh-bear site logo" src="./assets/Header.png"/>
-        <h2>We're glad you're here :D</h2>
+
+      <!-- Navigation Bar -->
+      <div id="NavBar" class = "navSection">
+          <h1>Narragansett Tribe</h1>
+          <div class="navLinkSide">
+            <h2>Home</h2>
+            <div id="resources-list">
+              <h2 href="#">Resources</h2>
+                <ul id="dropdown-resources">
+                  <h2><a href="#">Covid Updates</a></h2>
+                  <h2><a href="#">TEC Tribal Government Election</a></h2>
+                  <h2><a href="#">Tribal Noticec</a></h2>
+                </ul>
+            </div>
+          <h2>Tribal Government</h2>
+          <h2>Contact</h2>
+          <div class="icon navLinkSide">
+            <div class = "container">
+                <img src="./photos/menu.png" alt="Menu Icon"/>
+            </div>
+           
+          </div>
+          </div>
+        </div>
+        
+
+      <!-- Beginning Section -->
+      <div id="start-section">
+
+        <div class="info">
+          <img class = "logo" alt="Narragansett Nation Flag" src="./photos/flag.png"/>
+          <div class="subcard infoCard">
+            <h2>The Narragansett Indian Tribe</h2>
+            <p>The Narragansett Indians are descendants of the aboriginal people of the State of Rhode Island. Archaeological evidence and oral history of the Narragansett People establish their existence in the region more than 30,000 years ago.</p>
+          </div>
+        </div>
+
+        <div class='slider-container'>
+          <div class='slide'></div>
+          <div class='slide'></div>
+          <div class='slide'></div>
+          <div class='slide'></div>
+        </div>
+
       </div>
+
       <hr>
-      <div id="staffGallery">
-        <div class="card"> 
-          <img class="galleryImage" alt="picture of a donkey laying upside down" src="./assets/Eeyore-Eh.png"/>
-          <p>Eeyore Upside Down</p>
+      <!-- Link Section -->
+    <div class="card-container">
+
+        <div class="subcard">
+          <h3>Resources</h3>
+          <img class = "helpImage" alt="wampum" src="./photos/wampum.png"/>
         </div>
-        <div class="card"> 
-          <img class="galleryImage" alt="picture of a donkey sleeping sitting up" src="./assets/Eeyore-Zz.png"/>
-          <p>Eeyore Sleeping!</p>
+
+        <div class="subcard">
+          <h3>Events</h3>
+          <img class = "helpImage" alt="wampum" src="./photos/jingle.png"/>
         </div>
-        <div class="card"> 
-          <img class="galleryImage" alt="picture of a kangaroo with her child" src="./assets/Kanga-Roo.png"/>
-          <p>Kanga and Roo</p>
+
+        <div class="subcard">
+          <h3>Resources</h3>
+          <img class = "helpImage" alt="wampum" src="./photos/woodland.png"/>
         </div>
-        <div class="card"> 
-          <img class="galleryImage" alt="picture of Owl with a phone in claw" src="./assets/Owl-Phone.png"/>
-          <p>Wol with a Phone</p>
+
+        <div class="subcard">
+          <h3>Johnson O'Malley Program</h3>
+          <img class = "helpImage" alt="wampum" src="./photos/duo.png"/>
         </div>
+        
+        <div class="subcard">
+          <h3>Departments</h3>
+        </div>
+
+        <div class="subcard">
+          <h3>Tribal Election Committee</h3>
+        </div>
+
+        <div class="subcard">
+          <h3>News</h3>
+        </div>
+
+        <div class="subcard">
+          <h3>Request for Proposal (RFP)</h3>
+        </div>
+
+        <div class="subcard">
+          <h3>NIT Emergency Management</h3>
+        </div>
+
       </div>
+
+
+    </div>
+        
+  
+   
+   <div class="end-section">
+
+   </div>
+   
     </body>
   
   </html>

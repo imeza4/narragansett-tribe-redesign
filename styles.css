@@ -1,5 +1,238 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+   } 
 
-
-#h1{
-    
+h1 {
+    color: #933414;
+    padding-right: 4%;
+    padding-left: 4%;
+    text-wrap: wrap;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
 }
+
+h2{
+    color: #2C6D76;
+    padding-right: 4%;
+    padding-left: 4%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h3{
+    color: #283618;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+/* navbar-dropdown */
+#resources-list {
+    position: relative; 
+}
+
+#dropdown-resources {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    padding: 3cqw;
+    background-color: #EFEFF0; /* Background color of the dropdown */
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.1);
+} 
+
+#resources-list:hover #dropdown-resources {
+    display: block;
+}
+
+.navSection {
+    height: 40%;
+    border-bottom: solid;
+    margin: 0% 0% 3% 0% ;
+    display: flex;
+    flex-direction: row;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  .navLinkSide {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 25%; 
+  }
+  
+  .navLinkSide h2 {
+    white-space: nowrap;
+  }
+  
+.icon {
+    display:none;
+  }
+  
+
+.logo{
+    width: 23vh;
+    height: 21vh;
+}
+
+
+/* slideshow */
+.slider-container{
+    width: 85vh;
+    height: 500px;
+    overflow: hidden;
+    position: relative;   
+    animation: 0.4s 0.2s both fadeIn;
+  }
+  
+  .slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 85vh;
+    height: 500px;
+  
+    animation: 12s linear infinite sliderAnimation;
+  }
+  
+  .slide:first-of-type{
+    background: no-repeat 50% 20%/cover url('./photos/duo.png');
+  }
+
+  .slide:nth-of-type(2){
+    background: no-repeat center/cover url('./photos/wampum.png');
+      animation-delay: -9s;
+  }
+  
+  .slide:nth-of-type(3){
+    background: no-repeat center/cover url('./photos/woodland.png');
+    animation-delay: -6s;
+  }
+
+  .slide:last-of-type{
+    background: no-repeat bottom/cover url('./photos/jingle.png');
+    /* Will start after 9s */
+    animation-delay: -3s;
+  }
+  
+  @keyframes sliderAnimation{
+    /* 4 slides, 20% in place and 5% transition time = 100% */
+    0%{transform: translateX(0); opacity: 1;} /* starts in view */
+    20%{transform: translateX(0); opacity: 1;} /* stays in view */
+    25%{transform: translateX(-100%); opacity: 1;} /* slides out left */
+    70%{transform: translateX(-100%); opacity: 0;} /* Doesn't matter at what percent: changes to transparent so can't see it travel back across to the right. */
+    71%{transform: translateX(100%); opacity: 0;} /* Doesn't matter at what percent: moves off right */
+    95%{transform: translateX(100%); opacity: 1;} /* Becomes transparent and Ready to slide on from the right */
+  }
+  
+  body{
+    background-color: #FFFAEF;
+
+  }
+  
+  @keyframes fadeIn{
+    from{opacity: 0;}
+  }
+
+  #start-section{
+    display: flex;
+    justify-content: space-around;
+    margin: 5vh 8vh 5vh 0vh;
+    flex-flow: row wrap;
+  }
+
+  .info{
+    width: 50%;
+    height: 50%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .subcard{
+        margin: 8vh 8vh 8vh 8vh;
+        background-color: #E6EBE6;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+        padding: 3vh 2.7vh 3vh 2.7vh;
+        justify-content: center;
+        width: 24rem;
+        height: 16rem;
+        text-align: center;
+    }
+  }
+
+  .subcard{
+    margin: 8vh 8vh 8vh 8vh;
+    background-color: #E6EBE6;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+    padding: 3vh 2.7vh 3vh 2.7vh;
+    justify-content: center;
+    width: 14rem;
+    height: 16rem;
+    text-align: center;
+
+  }
+
+  .infoCard{
+    width: 20rem;
+    height: 16rem;
+  }
+
+  .card-container{
+    display:flex;
+    flex-flow: row wrap;
+    align-content: space-around;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .helpImage{
+    width: 9rem;
+    height: 9rem;
+  }
+
+  /* smaller screen */
+  @media only screen and (max-width: 1060px) {
+    body{
+        background-color: #FFFAEF;
+    
+      }
+      .navLinkSide {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 25%; 
+      }
+      .navSection {
+        height: 40%;
+        border-bottom: solid;
+        margin: 0% 0% 3% 0% ;
+        display: flex;
+        flex-direction: row;
+        padding-top: 5%;
+        padding-bottom: 5%;
+      }
+
+    .navLinkSide h2 {
+      display:none;
+    }
+    .icon {
+      /* visibility: visible; */
+      display:flex;
+
+    }
+    .container{
+        width: 34px;
+        height: 22px;
+    }
+
+    .contianer img{
+        width: 100%;
+        height: auto;
+    }
+
+
+  }
